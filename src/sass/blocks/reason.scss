@@ -1,0 +1,27 @@
+.reason {
+  &__title {
+    @include title();
+  }
+
+  &__text {
+    @include text();
+  }
+
+  &__img-wrapper {
+    margin: 0;
+  }
+
+  &__item {
+    margin: 0;
+    padding: 40px 20px;
+
+    text-align: center;
+
+    background-color: #ffffff;
+    box-shadow: 0 -1px 0 #d6d6d1;
+  }
+
+  &__item--bg {
+    background-color: #81b3d2;
+  }
+}

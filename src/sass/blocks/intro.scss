@@ -1,0 +1,13 @@
+.intro {
+  position: relative;
+
+  padding-top: 90px;
+  padding-bottom: 95px;
+
+  text-align: center;
+
+  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 100%, 50% 100%;
+  background-size: cover, cover;
+}
