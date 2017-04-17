@@ -1,0 +1,11 @@
+.copyright {
+  @include text();
+}
+
+.copyright__link {
+  font-size: 0;
+}
+
+.copyright__img {
+  vertical-align: bottom;
+}

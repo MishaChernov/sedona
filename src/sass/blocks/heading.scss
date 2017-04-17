@@ -1,0 +1,13 @@
+.heading {
+  padding: $block-padding;
+
+  text-align: center;
+}
+
+.heading__title {
+  @include title();
+}
+
+.heading__text {
+  @include text();
+}

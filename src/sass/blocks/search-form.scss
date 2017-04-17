@@ -1,0 +1,13 @@
+.search-form {
+  padding: $block-padding;
+  text-align: center;
+}
+
+.search-form__title {
+  @include title();
+  font-size: 21px;
+}
+
+.search-form__text {
+  @include text();
+}

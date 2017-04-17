@@ -1,27 +1,51 @@
 .reason {
-  &__title {
-    @include title();
-  }
+  text-align: center;
 
-  &__text {
-    @include text();
-  }
+  background-color: #eeeeee;
 
-  &__img-wrapper {
-    margin: 0;
-  }
+  &--padding {
+    padding: 28px 30px;
 
-  &__item {
-    margin: 0;
-    padding: 40px 20px;
-
-    text-align: center;
-
-    background-color: #ffffff;
     box-shadow: 0 -1px 0 #d6d6d1;
   }
+}
 
-  &__item--bg {
-    background-color: #81b3d2;
+.reason__title {
+  @include title();
+
+  &--color {
+    color: $color-white;
+  }
+}
+
+.reason__text {
+  @include text();
+
+  &--color {
+    color: $color-white;
+  }
+}
+
+.reason__img-wrapper {
+  height: 260px;
+  margin: 0;
+}
+
+.reason__item {
+  margin: 0;
+  padding: $block-padding;
+
+  text-align: center;
+
+  box-shadow: 0 1px 0 #d6d6d1;
+
+  &--bg {
+    background: $bg-blue;
+  }
+
+  &--bg-triangle {
+    background: $bg-blue url("../img/bg-triangle.svg") no-repeat;
+    background-position: 50% 0%;
+    background-size: contain;
   }
 }
