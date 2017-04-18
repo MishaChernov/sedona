@@ -8,13 +8,67 @@
 
     box-shadow: 0 -1px 0 #d6d6d1;
   }
+
+  &--wrapper {
+    padding-left: 20%;
+  }
 }
 
 .reason__title {
+  position: relative;
+
   @include title();
 
   &--color {
     color: $color-white;
+  }
+
+  &--houses::before {
+    content: "";
+    position: absolute;
+    left: -70px;
+    top: -30px;
+
+    display: block;
+    width: 77px;
+    height: 74px;
+    transform: scale(0.5);
+
+    background-image: url("../img/icon-house.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--souvenirs::before {
+    content: "";
+    position: absolute;
+    left: -70px;
+    top: -30px;
+
+    display: block;
+    width: 77px;
+    height: 74px;
+    transform: scale(0.5);
+
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--foods::before {
+    content: "";
+    position: absolute;
+    left: -70px;
+    top: -30px;
+
+    display: block;
+    width: 77px;
+    height: 74px;
+    transform: scale(0.5);
+
+    background-image: url("../img/icon-burger.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -33,17 +87,21 @@
 
 .reason__item {
   margin: 0;
-  padding: $block-padding;
+  padding: 28px 20px;
 
-  text-align: center;
+  text-align: left;
 
   box-shadow: 0 1px 0 #d6d6d1;
 
   &--bg {
+    text-align: center;
     background: $bg-blue;
   }
 
   &--bg-triangle {
+    padding-top: 50px;
+    text-align: center;
+
     background: $bg-blue url("../img/bg-triangle.svg") no-repeat;
     background-position: 50% 0%;
     background-size: contain;
