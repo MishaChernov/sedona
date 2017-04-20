@@ -6,9 +6,47 @@
 }
 
 @mixin text() {
-  font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   color: #333333;
   text-transform: uppercase;
+}
+
+@mixin caption-img() {
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+@mixin img-author() {
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: none;
+  font-style: normal;
+}
+
+@mixin reason-item-img() {
+  content: "";
+  position: absolute;
+  left: -70px;
+  top: -30px;
+
+  display: block;
+  width: 77px;
+  height: 74px;
+  transform: scale(0.5);
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin btn-blue-hover() {
+  background-color: #669ec0;
+}
+
+@mixin btn-blue-active() {
+  color: rgba(255, 255, 255, 0.3);
+  animation-name: btn-blick;
+  animation-duration: 0.25s;
+  animation-iteration-count: infinite;
 }

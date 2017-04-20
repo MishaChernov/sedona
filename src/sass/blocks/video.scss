@@ -1,0 +1,40 @@
+.video {
+  padding-top: 30px;
+  padding-bottom: 75px;
+
+  text-align: center;
+}
+
+.video__title {
+  @include title();
+  margin-top: 0;
+  padding: 0 9%;
+}
+
+.video__text {
+  padding: 0 9%;
+
+  @include text();
+  line-height: 24px;
+}
+
+.video__wrapper {
+  position: relative;
+
+  width: 100%;
+  margin-top: 30px;
+
+  text-align: center;
+}
+
+.video__img {
+  margin: 0;
+  width: 100%;
+}
+
+.video__video-player {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
