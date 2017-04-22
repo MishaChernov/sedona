@@ -42,83 +42,89 @@
       </div>
 
       <form class="feedback-form  page-main__feedback-form" action="/" method="post">
-        <fieldset class="feedback-form__item">
+        <fieldset class="feedback-form__item  feedback-form__item--full-name">
           <legend class="feedback-form__title">Представьтесь, пожалуйста:</legend>
 
           <label class="feedback-form__label">
-              Имя:
-            <input class="feedback-form__input" type="text" name="name" placeholder="Петр" required>
+              <span class="feedback-form__text">Имя:</span>
+            <input class="feedback-form__input  feedback-form__input--name" type="text" name="name" placeholder="Петр" required>
           </label>
 
           <label class="feedback-form__label">
-              Фамилия:
+              <span class="feedback-form__text">Фамилия:</span>
             <input class="feedback-form__input" type="text" name="surname" placeholder="Иванов" required>
           </label>
 
           <label class="feedback-form__label">
-              Отчество:
+              <span class="feedback-form__text">Отчество:</span>
             <input class="feedback-form__input" type="text" name="patronymic" placeholder="Александрович" required>
           </label>
         </fieldset>
 
-        <fieldset class="feedback-form__item">
+        <fieldset class="feedback-form__item  feedback-form__item--contact-info">
           <legend class="feedback-form__title">Контактная информация:</legend>
 
           <label class="feedback-form__label">
-              Контактный телефон:
-            <input class="feedback-form__input" type="tel" name="phone" placeholder="Введите телефон">
+              <span class="feedback-form__text">Контактный телефон:</span>
+              <div class="feedback-form__input-wrapper">
+                <input class="feedback-form__input  feedback-form__input--phone" type="tel" name="phone" placeholder="Введите телефон">
+                <img class="feedback-form__phone-img" src="img/icon-phone.svg" width="18px" height="18px" alt="Phone">
+              </div>
           </label>
 
           <label class="feedback-form__label">
-              Электронная почта:
-            <input class="feedback-form__input" type="email" name="email" placeholder="Введите e-mail" required>
+              <span class="feedback-form__text">Электронная почта:</span>
+            <div class="feedback-form__input-wrapper">
+              <input class="feedback-form__input  feedback-form__input--email" type="email" name="email" placeholder="Введите e-mail" required>
+              <img class="feedback-form__email-img" src="img/icon-mail.svg" width="16px" height="12px" alt="Phone">
+            </div>
           </label>
         </fieldset>
 
-        <fieldset class="feedback-form__item">
+        <fieldset class="feedback-form__item  feedback-form__item--impression">
           <legend class="feedback-form__title">Ваше общее впечатление:</legend>
 
-          <label class="feedback-form__label  feedback-form__label--size">
-            Скорее положительное
+          <label class="feedback-form__label  feedback-form__label--radio">
             <input class="feedback-form__radio" type="radio" name="impression" value="positive" required checked>
+            <span class="feedback-form__text  feedback-form__text--radio">Скорее положительное</span>
           </label>
 
-          <label class="feedback-form__label  feedback-form__label--size">
-            Скорее отрицательное
+          <label class="feedback-form__label  feedback-form__label--radio">
             <input class="feedback-form__radio" type="radio" name="impression" value="negative" required>
+            <span class="feedback-form__text  feedback-form__text--radio">Скорее отрицательное</span>
           </label>
 
-          <label class="feedback-form__label  feedback-form__label--size">
-            Затрудняюсь ответить
+          <label class="feedback-form__label  feedback-form__label--radio">
             <input class="feedback-form__radio" type="radio" name="impression" value="neutral" required>
+            <span class="feedback-form__text  feedback-form__text--radio">Затрудняюсь ответить</span>
           </label>
         </fieldset>
 
-        <fieldset class="feedback-form__item">
+        <fieldset class="feedback-form__item  feedback-form__item--visits">
           <legend class="feedback-form__title">Посещенные достопримечательности:</legend>
 
-          <label class="feedback-form__label  feedback-form__label--size">
-            Мост Дьявола
-            <input class="feedback-form__checked" type="checkbox" name="visit" value="Devil's Bridge" checked>
+          <label class="feedback-form__label  feedback-form__label--checkbox">
+            <input class="feedback-form__checkbox" type="checkbox" name="visit" value="Devil's Bridge" checked>
+            <span class="feedback-form__text  feedback-form__text--checkbox">Мост Дьявола</span>
           </label>
 
-          <label class="feedback-form__label  feedback-form__label--size">
-            Слайд-парк
-            <input class="feedback-form__checked" type="checkbox" name="visit" value="Slide-park" checked>
+          <label class="feedback-form__label  feedback-form__label--checkbox">
+            <input class="feedback-form__checkbox" type="checkbox" name="visit" value="Slide-park" checked>
+            <span class="feedback-form__text  feedback-form__text--checkbox">Слайд-парк</span>
           </label>
 
-          <label class="feedback-form__label  feedback-form__label--size">
-            Гора-Колокол
-            <input class="feedback-form__checked" type="checkbox" name="visit" value="Mount Bell">
+          <label class="feedback-form__label  feedback-form__label--checkbox">
+            <input class="feedback-form__checkbox" type="checkbox" name="visit" value="Mount Bell">
+            <span class="feedback-form__text  feedback-form__text--checkbox">Гора-Колокол</span>
           </label>
 
-          <label class="feedback-form__label  feedback-form__label--size">
-            Красные скалы
-            <input class="feedback-form__checked" type="checkbox" name="visit" value="Red rocks" checked>
+          <label class="feedback-form__label  feedback-form__label--checkbox">
+            <input class="feedback-form__checkbox" type="checkbox" name="visit" value="Red rocks" checked>
+            <span class="feedback-form__text  feedback-form__text--checkbox">Красные скалы</span>
           </label>
         </fieldset>
 
-        <fieldset class="feedback-form__item">
+        <fieldset class="feedback-form__item  feedback-form__item--message">
           <legend class="feedback-form__title">Опишите свои эмоции:</legend>
 
           <textarea class="feedback-form__textarea" name="message" rows="4">Опишите подробно все свои восторги</textarea>
@@ -169,13 +175,13 @@
       </p>
     </footer>
 
-    <div class="popup-error  page-wrapper__popup-error">
+    <div class="popup-error  global-wrapper__popup-error">
       <h3 class="popup-error__title">Что то пошло не так!</h3>
       <p class="popup-error__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       <button class="popup-error__btn  btn" type="button">Ок</button>
     </div>
 
-    <div class="popup-success  page-wrapper__popup-success">
+    <div class="popup-success  global-wrapper__popup-success">
       <h3 class="popup-success__title">Ваш отзыв отправлен!</h3>
       <p class="popup-success__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
         В ближайшее время мы опубликуем его на сайте.</p>
