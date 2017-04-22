@@ -19,7 +19,8 @@
 
 .menu__link {
   display: block;
-  padding: 6px 0 8px 0;
+  padding-top: 6px;
+  padding-bottom: 8px;
 
   text-decoration: none;
   text-transform: uppercase;
@@ -41,14 +42,12 @@
   }
 }
 
-.menu__link--cursor {
-  cursor: default;
-}
-
 .menu__wrapper {
   position: relative;
 
-  padding: 12px 20px 12px 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
   height: 32px;
 
   box-shadow: 0 -4px 10px -4px rgba(0, 0, 0, 0.5);

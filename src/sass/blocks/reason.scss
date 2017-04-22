@@ -55,7 +55,7 @@
   width: 100%;
 }
 
-.reason__item {
+.reason__features {
   margin: 0;
   padding: 28px 20px;
 
@@ -70,6 +70,7 @@
 
   &--bg-triangle {
     padding-top: 50px;
+
     text-align: center;
 
     background: $bg-blue url("../img/bg-triangle.svg") no-repeat;
@@ -78,7 +79,7 @@
   }
 }
 
-.reason__recommendation {
+.reason__item {
   margin-top: 30px;
   padding-left: 20%;
   padding-right: 25px;
@@ -86,6 +87,6 @@
   text-align: left;
 }
 
-.reason__recommendation:last-child {
+.reason__item:last-child {
   padding-bottom: 20px;
 }

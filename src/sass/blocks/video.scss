@@ -6,9 +6,9 @@
 }
 
 .video__title {
-  @include title();
   margin-top: 0;
   padding: 0 9%;
+  @include title();
 }
 
 .video__text {
@@ -21,7 +21,6 @@
 .video__wrapper {
   position: relative;
 
-  width: 100%;
   margin-top: 30px;
 
   text-align: center;

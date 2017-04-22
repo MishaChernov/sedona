@@ -1,7 +1,11 @@
 .post {
+  padding-top: 23px;
+  padding-bottom: 20px;
+  padding-left: 6%;
+  padding-right: 6%;
+
   text-align: center;
   border-top: 1px solid #e5e5e5;
-  padding: 23px 6% 20px 6%;
 
   &:last-child {
     border-bottom: 1px solid #e5e5e5;
@@ -18,22 +22,24 @@
 }
 
 .post__caption {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   text-align: left;
 }
 
 .post__subtitle {
+  display: inline-block;
+  width: 100%;
   @include caption-img;
   margin: 0;
 }
 
 .post__author {
+  display: inline-block;
+  width: 100%;
   @include img-author;
 }
 
 .post__like {
+  font-family: "PT Sant", "Arial", sans-serif;
   @include caption-img;
   text-decoration: none;
   color: #000000;

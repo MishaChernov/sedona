@@ -11,7 +11,7 @@ body {
 }
 
 .global-wrapper {
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
 
   background-color: #ffffff;
@@ -44,4 +44,34 @@ body {
   clip: rect(0 0 0 0);
   clip: rect(0, 0, 0, 0);
   position: absolute;
+}
+
+.global-wrapper__popup-success {
+  position: fixed;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.global-wrapper__popup-error {
+  position: fixed;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+input:-webkit-input-placeholder {
+  opacity: 1;
+}
+
+input:-moz-placeholder {
+  opacity: 1;
+}
+
+input:-ms-input-placeholder {
+  opacity: 1;
+}
+
+input:-o-input-placeholder {
+  opacity: 1;
 }
