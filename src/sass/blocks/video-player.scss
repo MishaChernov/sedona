@@ -16,6 +16,7 @@
 
   width: 100%;
   min-height: 66px;
+  
   background-color: #f2f2f2;
 }
 
@@ -88,12 +89,14 @@
   &:hover .video-player__btn-img path {
     fill: #333333;
   }
+
   &:active .video-player__btn-img polygon,
   &:active .video-player__btn-img path {
     fill: #c1c1c1;
   }
 }
 
-.video-player__btn-img {
+.video-player__btn-img polygon,
+.video-player__btn-img path {
   fill: #5c6870;
 }

@@ -22,27 +22,26 @@
 }
 
 .post__caption {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 320px;
 }
 
 .post__subtitle {
-  display: inline-block;
-  width: 100%;
   @include caption-img;
   margin: 0;
 }
 
 .post__author {
-  display: inline-block;
-  width: 100%;
   @include img-author;
 }
 
 .post__like {
   font-family: "PT Sant", "Arial", sans-serif;
-  @include caption-img;
   text-decoration: none;
   color: #000000;
+  @include caption-img;
 
   &:hover .post__like-img {
     fill: #eeeeee;
