@@ -1,5 +1,6 @@
 .search-form {
-  padding: 10px 30px;
+  padding: 10px 5%;
+  padding-bottom: 40px;
 
   text-align: center;
 }
@@ -15,7 +16,8 @@
 
 .search-form__btn {
   margin: 40px auto;
-  
+  margin-bottom: 0;
+
   font-weight: 700;
 
   &:hover {
@@ -28,5 +30,21 @@
 
   &:disabled {
     background-color: #e5e5e5;
+  }
+}
+
+@media ($tablet-widths) {
+  .search-form {
+    padding: 0 20%;
+    padding-top: 45px;
+    padding-bottom: 60px;
+  }
+}
+
+@media ($desktop-widths) {
+  .search-form {
+    padding: 0 30%;
+    padding-top: 45px;
+    padding-bottom: 70px;
   }
 }

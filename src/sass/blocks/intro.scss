@@ -1,4 +1,5 @@
 .intro {
+  width: auto;
   padding-top: 90px;
   padding-bottom: 95px;
 
@@ -6,6 +7,40 @@
 
   background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: 50% 100%, 50% 100%;
-  background-size: cover, cover;
+  background-position: 50% 100%, 50% top;
+  background-size: 103%, cover;
+
+  &--tablet {
+    padding: 0;
+  }
+}
+
+.intro__text {
+  width: 282px;
+  height: 214px;
+}
+
+@media ($tablet-widths) {
+  .intro {
+    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
+    background-position: 50% 100%, 50% 0;
+
+    &--tablet {
+      padding-top: 100px;
+      padding-bottom: 120px;
+
+      background-position: 50% 100%, 50% 100%;
+    }
+  }
+
+  .intro__text {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media ($desktop-widths) {
+  .intro {
+    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
+  }
 }

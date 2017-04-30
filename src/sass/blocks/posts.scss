@@ -1,3 +1,10 @@
 .posts {
   text-align: center;
 }
+
+@media ($tablet-widths) {
+  .posts {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

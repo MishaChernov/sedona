@@ -10,13 +10,16 @@
 }
 
 .video-player__controls {
+  display: flex;
+  align-content: center;
+
   position: absolute;
   top: 44px;
   left: 0;
 
   width: 100%;
   min-height: 66px;
-  
+
   background-color: #f2f2f2;
 }
 
@@ -65,20 +68,24 @@
 }
 
 .video-player__replay-btn {
-  float: left;
-  width: 16px;
   margin-top: 23px;
   margin-left: 8%;
 }
 
 .video-player__btn-wrapper {
-  float: right;
-  width: 83px;
+  margin-left: auto;
   margin-right: 8%;
 }
 
+.video-player__subtitles-btn {
+  margin-right: 20px;
+}
+
 .video-player__btn {
+  height: 23px;
+  padding: 0;
   margin-top: 23px;
+
   background: none;
   border: none;
   outline: none;

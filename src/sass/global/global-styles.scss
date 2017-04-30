@@ -1,6 +1,7 @@
 body {
   min-width: 320px;
   margin: 0 auto;
+  padding: 0 3%;
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
@@ -11,19 +12,12 @@ body {
 }
 
 .global-wrapper {
-  min-width: 320px;
+  width: auto;
   margin: 0 auto;
 
   background-color: #ffffff;
-}
-
-.clearfix {
-  &:after {
-    content: "";
-    display: table;
-
-    clear: both;
-  }
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5),
+              0 0 7px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes btn-blick {
@@ -60,18 +54,26 @@ body {
   transform: translateX(-50%);
 }
 
-input:-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
   opacity: 1;
+  color: #000000;
 }
 
-input:-moz-placeholder {
+input:-moz-placeholder,
+textarea:-moz-placeholder {
   opacity: 1;
+  color: #000000;
 }
 
-input:-ms-input-placeholder {
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
   opacity: 1;
+  color: #000000;
 }
 
-input:-o-input-placeholder {
+input:-o-input-placeholder,
+textarea:-o-input-placeholder {
   opacity: 1;
+  color: #000000;
 }
