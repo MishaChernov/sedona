@@ -13,13 +13,13 @@
   @include text();
 }
 
-@media ($tablet-widths) {
+@media (min-width: $tablet-width) {
   .heading {
     padding: 0 28%;
     padding-top: 40px;
     padding-bottom: 50px;
   }
-  
+
   .heading__title {
     font-size: 21px;
     line-height: 26px;
@@ -30,7 +30,7 @@
   }
 }
 
-@media ($desktop-widths) {
+@media (min-width: $desktop-width) {
   .heading {
     padding: 0 30%;
     padding-top: 40px;

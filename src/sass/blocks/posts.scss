@@ -2,9 +2,10 @@
   text-align: center;
 }
 
-@media ($tablet-widths) {
+@media (min-width: $tablet-width) {
   .posts {
     display: flex;
     flex-wrap: wrap;
+    min-width: 500px;
   }
 }

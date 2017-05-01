@@ -7,25 +7,25 @@
 
   background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: 50% 100%, 50% top;
+  background-position: 50% 100%, 50% 100%;
   background-size: 103%, cover;
 
-  &--tablet {
+  &--padding {
     padding: 0;
   }
 }
 
-.intro__text {
+.intro__img {
   width: 282px;
   height: 214px;
 }
 
-@media ($tablet-widths) {
+@media (min-width: $tablet-width) {
   .intro {
     background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
-    background-position: 50% 100%, 50% 0;
+    background-position: 50% 100%, 50% 0%;
 
-    &--tablet {
+    &--padding {
       padding-top: 100px;
       padding-bottom: 120px;
 
@@ -33,14 +33,26 @@
     }
   }
 
-  .intro__text {
-    width: auto;
-    height: auto;
+  .intro__img {
+    width: 460px;
+    height: 350px;
+
+    &--size {
+      width: 458px;
+      height: 78px;
+    }
   }
 }
 
-@media ($desktop-widths) {
+@media (min-width: $desktop-width) {
   .intro {
     background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
+  }
+
+  .intro__img {
+    &--size {
+      width: 461px;
+      height: 79px;
+    }
   }
 }

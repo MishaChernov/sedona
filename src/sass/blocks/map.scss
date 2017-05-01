@@ -10,3 +10,9 @@
 .map__img {
   width: 99.95%;
 }
+
+@media (min-width: $desktop-width) {
+  .map__img {
+    width: 100%;
+  }
+}

@@ -60,7 +60,11 @@
   fill: #b2b2b2;
 }
 
-@media ($tablet-widths) {
+@media (min-width: $tablet-width) {
+  .posts {
+    padding: 0 7%;
+  }
+  
   .post {
     padding: 0;
     width: 50%;
@@ -93,11 +97,11 @@
     margin-left: auto;
   }
 
-  .post__caption--wrapper {
+  .post__caption-wrapper {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 61%;
+    width: 200px;
 
     text-align: left;
   }
