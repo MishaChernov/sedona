@@ -1,1 +1,18 @@
+@media (min-width: $tablet-width) and (max-width: 1199px) {
+  .page-main__photo,
+  .page-main__form {
+    padding: 0 7%;
+  }
+  .feedback-form__item {
+    padding: 0;
+  }
+}
 
+@media (min-width: $desktop-width) {
+  .page-main__form {
+    padding: 0 10%;
+  }
+  .feedback-form__item  {
+    padding: 0;
+  }
+}

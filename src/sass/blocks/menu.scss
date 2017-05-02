@@ -49,8 +49,7 @@
 .menu__wrapper {
   position: relative;
 
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px 0;
   padding-left: 20px;
   height: 32px;
 
@@ -77,24 +76,8 @@
     min-width: $tablet-width;
   }
 
-  .menu__item {
-    &:nth-child(1) {
-      margin: 0 8%;
-    }
-    &:nth-child(2) {
-      margin-right: auto;
-    }
-    &:nth-child(3) {
-      margin-left: auto;
-    }
-    &:nth-child(4) {
-      margin-left: 8%;
-      margin-right: 3%;
-    }
-  }
-
   .menu__link {
-    padding: 10px 0;
+    padding: 15px 0;
 
     font-size: 14px;
     line-height: 26px;
@@ -123,13 +106,31 @@
   }
 
   .menu__logo {
-    top: -50px;
+    top: -56px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: 1199px){
+  .menu__item {
+    &:nth-child(1) {
+      margin: 0 8%;
+    }
+    &:nth-child(2) {
+      margin-right: auto;
+    }
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+    &:nth-child(4) {
+      margin-left: 8%;
+      margin-right: 3%;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .menu__item {
-    &:nth-child(1) {
+    &:first-child {
       margin-left: 10%;
       margin-right: 15%;
     }
@@ -139,7 +140,7 @@
     &:nth-child(3) {
       margin-left: auto;
     }
-    &:nth-child(4) {
+    &:last-child {
       margin-left: 15%;
       margin-right: 5%;
     }

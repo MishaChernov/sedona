@@ -1,33 +1,29 @@
 .video-player {
+  position: relative;
+
   width: 87%;
-  min-height: 110px;
+  min-height: 45px;
 
   background-color: rgba(0, 0, 0, 0.6);
-}
 
-.video-player__wrapper {
-  position: relative;
-}
+  &::after {
+    content: "";
 
-.video-player__controls {
-  display: flex;
-  align-content: center;
+    position: absolute;
+    top: 44px;
+    left: 0;
 
-  position: absolute;
-  top: 44px;
-  left: 0;
+    display: block;
+    width: 100%;
+    min-height: 66px;
 
-  width: 100%;
-  min-height: 66px;
-
-  background-color: #f2f2f2;
+    background-color: #f2f2f2;
+  }
 }
 
 .video-player__progress-bar {
   padding-top: 22px;
   padding-bottom: 20px;
-  padding-left: 8%;
-  padding-right: 8%;
 
   cursor: pointer;
 }
@@ -36,6 +32,8 @@
   position: relative;
 
   height: 3px;
+  width: 84%;
+  margin: 0 auto;
 
   font-size: 0;
 
@@ -67,24 +65,13 @@
   }
 }
 
-.video-player__replay-btn {
-  margin-top: 23px;
-  margin-left: 8%;
-}
-
-.video-player__btn-wrapper {
-  margin-left: auto;
-  margin-right: 8%;
-}
-
-.video-player__subtitles-btn {
-  margin-right: 20px;
-}
-
 .video-player__btn {
+  position: absolute;
+  z-index: 1;
+  top: 68px;
+
   height: 23px;
   padding: 0;
-  margin-top: 23px;
 
   background: none;
   border: none;
@@ -106,4 +93,60 @@
 .video-player__btn-img polygon,
 .video-player__btn-img path {
   fill: #5c6870;
+}
+
+.video-player__replay-btn {
+  left: 8%;
+}
+
+.video-player__subtitles-btn {
+  right: 20%;
+}
+
+.video-player__fullscreen-btn {
+  right: 8%;
+}
+
+@media (min-width: $tablet-width) {
+  .video-player {
+    width: 100%;
+    padding: 24px 0;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .video-player__time-line {
+    width: 60%;
+    margin-right: 25%;
+  }
+
+  .video-player__btn {
+    top: 36px;
+  }
+
+  .video-player__btn-img polygon,
+  .video-player__btn-img path {
+    fill: #ffffff;
+  }
+
+  .video-player__subtitles-btn {
+    right: 13%;
+  }
+
+  .video-player__replay-btn {
+    left: 5%;
+  }
+
+  .video-player__fullscreen-btn {
+    right: 5%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video {
+    width: 800px;
+    margin: 0 auto;
+  }
 }
