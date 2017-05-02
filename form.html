@@ -35,15 +35,17 @@
       </div>
     </header>
 
-    <main class="page-main">
+    <main class="page-main  page-main__form">
       <div class="heading  page-main__heading">
-        <h3 class="heading__title  heading__title--size">Оставьте свой отзыв</h3>
+        <h2 class="heading__title  heading__title--size">Оставьте свой отзыв</h2>
         <p class="heading__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </div>
 
       <form class="feedback-form  page-main__feedback-form" action="/" method="post">
-        <fieldset class="feedback-form__item">
-          <legend class="feedback-form__title">Представьтесь, пожалуйста:</legend>
+        <div class="feedback-form__item">
+          <h3 class="feedback-form__title  feedback-form__title--align--left">Представьтесь
+            <span class="feedback-form__title--hidden">, пожалуйста</span>:
+          </h3>
 
           <label class="feedback-form__label">
               <span class="feedback-form__text">Имя:</span>
@@ -59,13 +61,19 @@
               <span class="feedback-form__text">Отчество:</span>
             <input class="feedback-form__input" type="text" name="patronymic" placeholder="Александрович" required>
           </label>
-        </fieldset>
+        </div>
 
-        <fieldset class="feedback-form__item">
-          <legend class="feedback-form__title">Контактная информация:</legend>
+        <div class="feedback-form__item  feedback-form__item--contacts">
+          <h3 class="feedback-form__title  feedback-form__title--lines">
+            <span class="feedback-form__title--fix-width">
+              Контактная информация:
+            </span>
+          </h3>
 
           <label class="feedback-form__label  feedback-form__label--phone">
-              <span class="feedback-form__text">Контактный телефон:</span>
+              <span class="feedback-form__text">
+                <span class="feedback-form__text--hidden">Контактный </span>телефон:
+              </span>
               <div class="feedback-form__input-wrapper  feedback-form__input-wrapper--phone">
                 <input class="feedback-form__input  feedback-form__input--phone" type="tel" name="phone" placeholder="Введите телефон">
               </div>
@@ -77,10 +85,14 @@
                 <input class="feedback-form__input  feedback-form__input--email" type="email" name="email" placeholder="Введите e-mail" required>
               </div>
           </label>
-        </fieldset>
+        </div>
 
-        <fieldset class="feedback-form__item">
-          <legend class="feedback-form__title">Ваше общее впечатление:</legend>
+        <div class="feedback-form__item">
+          <h3 class="feedback-form__title  feedback-form__title--align--left">
+            <span class="feedback-form__title--fix-width">
+              Ваше общее впечатление:
+            </span>
+          </h3>
 
           <label class="feedback-form__label  feedback-form__label--radio">
             <input class="feedback-form__radio" type="radio" name="impression" value="positive" required checked>
@@ -96,10 +108,14 @@
             <input class="feedback-form__radio" type="radio" name="impression" value="neutral" required>
             <span class="feedback-form__text  feedback-form__text--radio">Затрудняюсь ответить</span>
           </label>
-        </fieldset>
+        </div>
 
-        <fieldset class="feedback-form__item  feedback-form__item--visits">
-          <legend class="feedback-form__title">Посещенные достопримечательности:</legend>
+        <div class="feedback-form__item  feedback-form__item--visits">
+          <h3 class="feedback-form__title  feedback-form__title--lines">
+            <span class="feedback-form__title--fix-width">
+              Посещенные достопримечательности:
+            </span>
+          </h3>
 
           <label class="feedback-form__label  feedback-form__label--checkbox">
             <input class="feedback-form__checkbox" type="checkbox" name="visit" value="Devil's Bridge" checked>
@@ -120,13 +136,17 @@
             <input class="feedback-form__checkbox" type="checkbox" name="visit" value="Red rocks" checked>
             <span class="feedback-form__text  feedback-form__text--checkbox">Красные скалы</span>
           </label>
-        </fieldset>
+        </div>
 
-        <fieldset class="feedback-form__item  feedback-form__item--message">
-          <legend class="feedback-form__title">Опишите свои эмоции:</legend>
+        <div class="feedback-form__item  feedback-form__item--message">
+          <h3 class="feedback-form__title  feedback-form__title--lines">
+            <span class="feedback-form__title--fix-width">
+              Опишите свои эмоции:
+            </span>
+          </h3>
 
           <textarea class="feedback-form__textarea" name="message" placeholder="Опишите подробно все свои восторги"></textarea>
-        </fieldset>
+        </div>
 
         <button class="feedback-form__btn  btn" type="submit">Отправить отзыв</button>
       </form>
