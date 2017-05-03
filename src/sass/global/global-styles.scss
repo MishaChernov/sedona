@@ -34,6 +34,21 @@ body {
   }
 }
 
+@keyframes animation-menu-opened {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(100px);
+  }
+  70% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .visually-hidden {
   margin: -1px;
   padding: 0;

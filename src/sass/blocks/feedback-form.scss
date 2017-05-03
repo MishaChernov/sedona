@@ -241,28 +241,28 @@
 
     border-bottom: none;
 
-    &:nth-child(1) {
+    &--full-name {
       order: 2;
 
       width: 45%;
       margin-left: 5%;
     }
-    &:nth-child(2) {
+    &--contacts {
       order: 3;
 
       width: 100%;
     }
-    &:nth-child(3) {
+    &--impression {
       order: 1;
 
       width: 50%;
     }
-    &:nth-child(4) {
+    &--visits {
       order: 4;
 
       width: 100%;
     }
-    &:nth-child(5) {
+    &--message {
       order: 5;
 
       width: 100%;
@@ -330,6 +330,11 @@
       margin-bottom: 20px;
       min-height: 58px;
     }
+
+    &--checkbox {
+      margin: 0 auto;
+      margin-bottom: 55px;
+    }
   }
 
   .feedback-form__text {
@@ -343,7 +348,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 648px;
+    width: auto;
     margin: 0 auto;
   }
 }
