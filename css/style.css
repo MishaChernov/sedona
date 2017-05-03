@@ -403,6 +403,16 @@ body {
   100% {
     background-color: #5496bd; } }
 
+@keyframes animation-menu-opened {
+  0% {
+    transform: translateY(0); }
+  30% {
+    transform: translateY(100px); }
+  70% {
+    transform: translateY(-20px); }
+  100% {
+    transform: translateY(0); } }
+
 .visually-hidden {
   margin: -1px;
   padding: 0;
@@ -713,6 +723,7 @@ textarea:-o-input-placeholder {
   margin: 0; }
 
 .menu__item {
+  position: relative;
   list-style: none;
   text-align: center;
   background-color: #81b3d2;
@@ -745,6 +756,7 @@ textarea:-o-input-placeholder {
   padding: 12px 0;
   padding-left: 20px;
   height: 32px;
+  text-align: right;
   box-shadow: 0 -4px 10px -4px rgba(0, 0, 0, 0.5); }
 
 .menu__logo {
@@ -753,6 +765,60 @@ textarea:-o-input-placeholder {
   left: 50%;
   transform: translateX(-50%);
   margin: 0 auto; }
+
+.menu__toggle {
+  position: absolute;
+  top: 16px;
+  right: 30px;
+  display: block;
+  width: 30px;
+  height: 22px;
+  padding: 0;
+  font-size: 0;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer; }
+
+.menu--closed .menu__toggle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #81b3d2;
+  box-shadow: 0 -8px 0 #81b3d2, 0 -16px 0 #81b3d2; }
+
+.menu--closed .menu__toggle:hover::before {
+  background-color: rgba(129, 179, 210, 0.6);
+  box-shadow: 0 -8px 0 rgba(129, 179, 210, 0.6), 0 -16px 0 rgba(129, 179, 210, 0.6); }
+
+.menu--closed .menu__toggle:active::before {
+  transform: rotate(90deg) scale(0) translateX(-200px);
+  transition: 1s;
+  background-color: #81b3d2;
+  box-shadow: 0 -8px 0 #81b3d2, 0 -16px 0 #81b3d2; }
+
+.menu--opened .menu__toggle {
+  top: -205px;
+  height: 26px; }
+  .menu--opened .menu__toggle::before, .menu--opened .menu__toggle::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: white; }
+  .menu--opened .menu__toggle::before {
+    transform: rotate(-45deg); }
+  .menu--opened .menu__toggle::after {
+    transform: rotate(45deg); }
+  .menu--opened .menu__toggle:hover::before, .menu--opened .menu__toggle:hover::after {
+    background-color: rgba(255, 255, 255, 0.5); }
 
 .popup-error {
   display: none;
@@ -1293,24 +1359,24 @@ textarea:-o-input-placeholder {
     margin-bottom: 45px;
     border-bottom: none; }
 
-  .feedback-form__item:nth-child(1) {
+  .feedback-form__item--full-name {
     order: 2;
     width: 45%;
     margin-left: 5%; }
 
-  .feedback-form__item:nth-child(2) {
+  .feedback-form__item--contacts {
     order: 3;
     width: 100%; }
 
-  .feedback-form__item:nth-child(3) {
+  .feedback-form__item--impression {
     order: 1;
     width: 50%; }
 
-  .feedback-form__item:nth-child(4) {
+  .feedback-form__item--visits {
     order: 4;
     width: 100%; }
 
-  .feedback-form__item:nth-child(5) {
+  .feedback-form__item--message {
     order: 5;
     width: 100%; }
 
@@ -1360,6 +1426,10 @@ textarea:-o-input-placeholder {
     margin-bottom: 20px;
     min-height: 58px; }
 
+  .feedback-form__label--checkbox {
+    margin: 0 auto;
+    margin-bottom: 55px; }
+
   .feedback-form__text--radio {
     margin-left: 25%; }
 
@@ -1367,7 +1437,7 @@ textarea:-o-input-placeholder {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 648px;
+    width: auto;
     margin: 0 auto; }
 
   .posts {
@@ -1403,6 +1473,9 @@ textarea:-o-input-placeholder {
   .intro__img--size {
     width: 458px;
     height: 78px; }
+
+  .menu__toggle {
+    display: none; }
 
   .menu__wrapper {
     height: 0;
@@ -1554,6 +1627,41 @@ textarea:-o-input-placeholder {
   .video__text {
     margin-bottom: 70px;
     padding: 0 130px; } }
+
+@media (max-width: 767px) {
+
+  .menu--closed .menu__list {
+    display: none; }
+
+  .menu--opened {
+    display: block;
+    animation-name: animation-menu-opened;
+    animation-duration: 700ms;
+    animation-timing-function: ease-out; }
+
+  .menu--opened .menu__toggle--closed {
+    top: -200px;
+    box-shadow: none; }
+
+  .menu--opened .menu__toggle--closed::before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 4px;
+    transform: rotate(45deg);
+    background-color: #ffffff; }
+
+  .menu--opened .menu__toggle--closed::after {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 4px;
+    transform: rotate(-45deg);
+    background-color: #ffffff; }
+
+  .menu--nojs .menu__toggle,
+  .menu--nojs .menu__list {
+    display: none; } }
 
 @media (min-width: 500px) {
 
