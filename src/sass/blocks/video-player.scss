@@ -21,7 +21,7 @@
   }
 }
 
-.video-player__progress-bar {
+.video-player__play-bar {
   padding-top: 22px;
   padding-bottom: 20px;
 
@@ -79,19 +79,16 @@
 
   cursor: pointer;
 
-  &:hover .video-player__btn-img polygon,
-  &:hover .video-player__btn-img path {
+  &:hover .video-player__btn-img {
     fill: #333333;
   }
 
-  &:active .video-player__btn-img polygon,
-  &:active .video-player__btn-img path {
+  &:active .video-player__btn-img {
     fill: #c1c1c1;
   }
 }
 
-.video-player__btn-img polygon,
-.video-player__btn-img path {
+.video-player__btn-img {
   fill: #5c6870;
 }
 
@@ -126,8 +123,8 @@
     top: 36px;
   }
 
-  .video-player__btn-img polygon,
-  .video-player__btn-img path {
+  .video-player__btn-img,
+  .video-player__btn-img {
     fill: #ffffff;
   }
 

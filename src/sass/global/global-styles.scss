@@ -7,7 +7,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  color: #000000;
+  color: $primary-text-color;
 }
 
 .global-wrapper {
@@ -22,30 +22,6 @@ body {
 @media (min-width: $desktop-width) {
   .global-wrapper {
     width: $desktop-width;
-  }
-}
-
-@keyframes btn-blick {
-  0% {
-    background-color: #3e84ae;
-  }
-  100% {
-    background-color: #5496bd;
-  }
-}
-
-@keyframes animation-menu-opened {
-  0% {
-    transform: translateY(0);
-  }
-  30% {
-    transform: translateY(100px);
-  }
-  70% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
 

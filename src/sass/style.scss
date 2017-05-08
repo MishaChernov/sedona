@@ -3,12 +3,14 @@
 @import "global/mixins.scss";
 @import "global/variables.scss";
 @import "global/global-styles.scss";
+@import "global/animations.scss";
 
 @import "blocks/page-header.scss";
 @import "blocks/page-main.scss";
 @import "blocks/page-footer.scss";
 
 @import "blocks/btn.scss";
+@import "blocks/burger.scss";
 @import "blocks/copyright.scss";
 @import "blocks/feedback-form.scss";
 @import "blocks/posts.scss";

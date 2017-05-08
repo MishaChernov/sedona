@@ -15,10 +15,11 @@
 .reason__title {
   position: relative;
 
+
   @include title();
 
   &--color {
-    color: $color-white;
+    color: $secondary-text-color;
   }
 
   &--houses::before {
@@ -41,7 +42,7 @@
   @include text();
 
   &--color {
-    color: $color-white;
+    color: $secondary-text-color;
   }
 }
 
@@ -52,7 +53,9 @@
 }
 
 .reason__img {
-  width: inherit;
+  width: 320px;
+  width: 100%;
+  height: 260px;
 }
 
 .reason__features {
@@ -65,7 +68,7 @@
 
   &--bg {
     text-align: center;
-    background: $bg-blue;
+    background: $secondary-bg-color;
   }
 
   &--bg-triangle {
@@ -73,7 +76,7 @@
 
     text-align: center;
 
-    background: $bg-blue url("../img/bg-triangle.svg") no-repeat;
+    background: $secondary-bg-color url("../img/bg-triangle.svg") no-repeat;
     background-position: 50% 0%;
     background-size: 102%;
   }
@@ -102,19 +105,24 @@
   .reason {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     min-width: 180px;
 
     &--bg-gray {
       flex-direction: column;
       padding: 30px 0;
-      max-width: 180px;
 
       box-shadow: none;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 
   .reason__item {
-    padding: 40px 6%;
+    max-width: 205px;
+    padding: 40px 3%;
     padding-top: 120px;
 
     align-self: baseline;
@@ -138,6 +146,7 @@
 
   .reason__title {
     padding: 0 15%;
+    margin-bottom: 0;
 
     &:before {
       top: -100px;
@@ -147,13 +156,36 @@
   }
 
   .reason__text {
+    display: block;
     margin: 0;
     margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   .reason__wrapper {
     display: flex;
     justify-content: space-around;
+    align-content: baseline;
+    flex-wrap: wrap;
     min-width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reason {
+    &--bg-gray {
+      width: 330px;
+    }
+  }
+
+  .reason__item {
+    padding: 40px 4%;
+  }
+
+  .reason__features {
+    &--bg {
+      width: 380px;
+      padding: 33px 73px;
+    }
   }
 }

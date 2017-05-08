@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/style-min.css">
 </head>
 <body>
-  <div class="global-wrapper">
+  <div class="global-wrapper  animation-menu-opened">
     <header class="page-header">
       <div class="page-header__wrapper">
         <nav class="menu  page-header__menu  menu--closed  menu--nojs">
@@ -27,14 +27,15 @@
           </ul>
           <div class="menu__wrapper">
             <img class="logo  menu__logo" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="logo sedona city">
-            <button class="menu__toggle" type="button">Открыть меню</button>
+            <button class="burger  menu__burger" type="button">Открыть меню</button>
           </div>
         </nav>
       </div>
 
-      <div class="intro  page-header__intro">
-        <img class="intro__img" src="img/text-sedona-index.svg" width="282" height="214" alt="Welcome Sedona">
-      </div>
+      <h1 class="intro  page-header__intro">
+        <span class="visually-hidden">Седона</span>
+          <img class="intro__img" src="img/text-sedona-index.svg" width="282" height="214" alt="Welcome Sedona">
+      </h1>
     </header>
 
     <main class="page-main">
@@ -44,18 +45,36 @@
       </div>
 
       <div class="reason">
-        <div class="reason__features  reason__features--bg-triangle">
+        <div class="reason__features  reason__features--bg  reason__features--bg-triangle">
           <h3 class="reason__title  reason__title--color">Настоящий городок</h3>
           <span class="reason__text  reason__text--color">— №1 —</span>
           <p class="reason__text  reason__text--color">Седона не атракцион для туристов, там течет своя жизнь</p>
         </div>
 
         <figure class="reason__img-wrapper">
-          <img class="reason__img" src="img/photo-city-mobile@1x.jpg" width="320" height="260" alt="photo city Sedona">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-city@1x.jpg 1x, img/photo-city@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-city-tablet@1x.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+            <img class="reason__img" src="img/photo-city-mobile@1x.jpg" srcset="img/photo-city-mobile@2x.jpg" alt="photo city Sedona">
+          </picture>
         </figure>
       </div>
 
-      <div class="reason">
+      <div class="reason  reason__wrapper">
+        <div class="reason__item">
+          <h3 class="reason__title  reason__title--houses">Жилье</h3>
+          <p class="reason__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </div>
+
+        <div class="reason__item">
+          <h3 class="reason__title  reason__title--souvenirs">Сувениры</h3>
+          <p class="reason__text">Не только китайского, но и местного производства!</p>
+        </div>
+
+        <div class="reason__item">
+          <h3 class="reason__title  reason__title--foods">Еда</h3>
+          <p class="reason__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </div>
         <div class="reason__item">
           <h3 class="reason__title  reason__title--houses">Жилье</h3>
           <p class="reason__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -80,7 +99,11 @@
         </div>
 
         <figure class="reason__img-wrapper  reason__img-wrapper--left">
-          <img class="reason__img" src="img/photo-bridge-mobile@1x.jpg" width="320" height="260" alt="photo bridge devil's">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-bridge@1x.jpg 1x, img/photo-bridge@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+            <img class="reason__img" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg" alt="photo bridge devil's">
+          </picture>
         </figure>
       </div>
 
@@ -117,7 +140,6 @@
 
     <footer class="page-footer">
       <span class="page-footer__hashtag">#Visitsedona</span>
-
       <div class="social-icons  page-footer__social-icons">
         <a class="social-link  social-icons__social-link social-link--tw" href="#">
           Твиттер

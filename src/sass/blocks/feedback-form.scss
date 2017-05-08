@@ -231,7 +231,7 @@
   .feedback-form {
     display: flex;
     flex-wrap: wrap;
-    min-width: 648px;
+    width: 100%;
 
     border-top: none;
   }
@@ -274,7 +274,7 @@
   }
 
   .feedback-form__title {
-    font-size: $font-size-legend;
+    font-size: $title-size-mobile-screen;
     margin-bottom: 40px;
 
     &--hidden {
@@ -288,8 +288,8 @@
     }
 
     &--fix-width {
-      display: inline-block;
-      vertical-align: middle;
+      display: block;
+      margin: 0 auto;
       width: 300px;
     }
 
@@ -309,7 +309,7 @@
         width: 19%;
         height: 1px;
 
-        background: $color-bg-lines-legend;
+        background: $bg-color-titles-lines;
         box-sizing: border-box;
       }
 
@@ -348,7 +348,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: auto;
+    width: 100%;
     margin: 0 auto;
   }
 }
