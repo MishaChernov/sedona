@@ -1,4 +1,4 @@
-@media (min-width: $tablet-width) and (max-width: 1199px) {
+@media (min-width: $tablet-width) {
   .page-main__photo,
   .page-main__form {
     padding: 0 7%;
@@ -9,6 +9,9 @@
 }
 
 @media (min-width: $desktop-width) {
+  .page-main__photo {
+    padding: 0;
+  }
   .page-main__form {
     padding: 0 10%;
   }

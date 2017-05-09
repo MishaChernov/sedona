@@ -19,7 +19,10 @@ body {
               0 0 7px rgba(0, 0, 0, 0.5);
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: 1199px) {
+  .body {
+    max-width: 1200px;
+  }
   .global-wrapper {
     width: $desktop-width;
   }

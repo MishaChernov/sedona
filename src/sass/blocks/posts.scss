@@ -9,3 +9,10 @@
     min-width: 500px;
   }
 }
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .posts {
+    width: 740px;
+    margin: 0 auto;
+  }
+}
