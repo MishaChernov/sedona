@@ -529,7 +529,9 @@ textarea:-o-input-placeholder {
   font-size: 0; }
 
 .copyright__img {
-  vertical-align: bottom; }
+  vertical-align: bottom;
+  width: 27px;
+  height: 34px; }
   .copyright__img:hover {
     fill: #81b3d2; }
   .copyright__img:active {
@@ -735,6 +737,10 @@ textarea:-o-input-placeholder {
 .intro__img {
   width: 282px;
   height: 214px; }
+
+.logo {
+  width: 102px;
+  height: 83px; }
 
 .map {
   width: 100%;
@@ -1283,7 +1289,8 @@ textarea:-o-input-placeholder {
 
   .feedback-form__item--impression {
     order: 1;
-    width: 50%; }
+    width: 50%;
+    box-shadow: 1px 0 0 #dbdbdb; }
 
   .feedback-form__item--visits {
     order: 4;
@@ -1340,9 +1347,7 @@ textarea:-o-input-placeholder {
     min-height: 58px; }
 
   .feedback-form__label--checkbox {
-    width: 225px;
-    margin: 0 12%;
-    margin-bottom: 52px; }
+    width: 225px; }
 
   .feedback-form__text--radio {
     margin-left: 25%; }
@@ -1387,6 +1392,10 @@ textarea:-o-input-placeholder {
   .intro__img--size {
     width: 458px;
     height: 78px; }
+
+  .logo {
+    width: 102px;
+    height: 83px; }
 
   .map__img {
     background-image: url("../img/bg-map-tablet@1x.jpg");
@@ -1446,7 +1455,7 @@ textarea:-o-input-placeholder {
     color: rgba(118, 99, 87, 0.3); }
 
   .menu__logo {
-    top: -56px; }
+    top: -58px; }
 
   .post {
     padding: 0;
@@ -1508,10 +1517,16 @@ textarea:-o-input-placeholder {
     text-align: center; }
 
   .reason__features--bg-triangle {
-    padding-top: 30px; }
+    padding: 0; }
 
   .reason__features--right {
     order: 2; }
+
+  .reason__features--bg {
+    padding: 0 30px;
+    padding-top: 40px;
+    min-height: 260px;
+    box-sizing: border-box; }
 
   .reason__img-wrapper--left {
     order: 1; }
@@ -1648,6 +1663,10 @@ textarea:-o-input-placeholder {
     width: 461px;
     height: 79px; }
 
+  .logo {
+    width: 188px;
+    height: 96px; }
+
   .map__img {
     background-image: url("../img/bg-map-desktop@1x.jpg"); }
 
@@ -1688,8 +1707,7 @@ textarea:-o-input-placeholder {
     padding-right: 4%; }
 
   .reason__features--bg {
-    width: 380px;
-    padding: 33px 73px; }
+    min-width: 400px; }
 
   .search-form {
     padding-top: 45px;
@@ -1786,8 +1804,15 @@ textarea:-o-input-placeholder {
 @media (min-width: 500px) {
 
   .reason__features--bg-triangle {
-    padding-top: 35px;
     background-image: none; } }
+
+@media (min-width: 950px) and (max-width: 1199px) {
+
+  .reason__img {
+    width: 618px; }
+
+  .reason__features--bg {
+    width: 100%; } }
 
 @media (min-width: 860px) and (max-width: 1199px) {
 
