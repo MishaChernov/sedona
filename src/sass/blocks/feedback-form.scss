@@ -256,6 +256,8 @@
       order: 1;
 
       width: 50%;
+
+      box-shadow: 1px 0 0 #dbdbdb;
     }
     &--visits {
       order: 4;
@@ -332,8 +334,6 @@
 
     &--checkbox {
       width: 225px;
-      margin: 0 12%;
-      margin-bottom: 52px;
     }
   }
 
