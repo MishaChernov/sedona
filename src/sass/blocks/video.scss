@@ -36,7 +36,7 @@
 
 .video__video-player {
   position: absolute;
-  bottom: 6px;
+  bottom: -59px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -63,6 +63,10 @@
     width: 648px;
     width: 100%;
     height: 499px;
+  }
+
+  .video-player {
+    bottom: 6px;
   }
 }
 
