@@ -1,14 +1,14 @@
 .feedback-form {
-  margin: 10px 0;
+  margin: 0;
+  margin-top: -8px;
   padding: 0;
 
   border-top: 1px solid #e5e5e5;
 }
 
 .feedback-form__item {
-  padding: 0;
-  padding-left: 6%;
-  padding-right: 6%;
+  padding: 0 6%;
+  padding-bottom: 7px;
   margin: 0;
 
   border: none;
@@ -19,11 +19,16 @@
 
     border: none;
   }
+
+  &--impression {
+    padding-bottom: 16px;
+  }
 }
 
 .feedback-form__title {
-  padding-top: 15px;
-  padding-bottom: 25px;
+  margin-top: 0;
+  padding-top: 16px;
+  padding-bottom: 5px;
 
   @include title();
     text-align: center;
@@ -36,6 +41,10 @@
   margin-bottom: 20px;
   min-width: 225px;
 
+  &--phone {
+    margin-bottom: 37px;
+  }
+
   &--phone,
   &--email {
     flex-wrap: wrap;
@@ -43,13 +52,13 @@
 
   &--radio {
     margin: 0 auto;
-    margin-bottom: 45px;
+    margin-bottom: 29px;
     width: 280px;
   }
 
   &--checkbox {
     margin: 0 auto;
-    margin-bottom: 55px;
+    margin-bottom: 39px;
     width: 280px;
   }
 }
@@ -58,33 +67,41 @@
   @include text();
   line-height: 26px;
 
-    &--radio,
-    &--checkbox {
-      position: relative;
+  &--margin {
+    margin-left: 23px;
+  }
 
-      color: #000000;
-      font-weight: 700;
-      margin-left: 31%;
+  &--radio,
+  &--checkbox {
+    position: relative;
 
-      &::before {
-        content: "";
-        position: absolute;
-        left: -75px;
-        top: -15px;
-        width: 56px;
-        height: 56px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 28%;
+    margin-top: 14px;
 
-        background-color: #f2f2f2;
+    text-transform: none;
 
-        cursor: pointer;
-      }
+    &::before {
+      content: "";
+      position: absolute;
+      left: -75px;
+      top: -15px;
+      width: 56px;
+      height: 56px;
+
+      background-color: #f2f2f2;
+
+      cursor: pointer;
     }
+  }
 
-    &--radio {
-      &::before {
-        border-radius: 50%;
-      }
+  &--radio {
+    &::before {
+      border-radius: 50%;
     }
+  }
 
   &:hover::before {
     background-color: #e5e5e5;
@@ -101,8 +118,9 @@
 
 .feedback-form__input,
 .feedback-form__textarea {
-  padding: 16px 0;
-  padding-left: 7%;
+  padding: 15px 0;
+  padding-left: 8%;
+  padding-bottom: 16px;
   margin-left: 6%;
   width: 100%;
 
@@ -150,8 +168,8 @@
     right: 0;
     top: 0;
 
-    padding: 0 25px;
-    height: 58px;
+    padding: 0 30px;
+    height: 57px;
   }
 
   &--phone {
@@ -166,7 +184,6 @@
       }
     }
 }
-
 
 .feedback-form__radio,
 .feedback-form__checkbox {
@@ -205,6 +222,8 @@
 
 .feedback-form__textarea {
   margin: 0;
+  padding-left: 20px;
+  padding-top: 7px;
   width: 100%;
   min-height: 160px;
 
@@ -214,7 +233,7 @@
 
 .feedback-form__btn {
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 30px;
 
   cursor: pointer;
 
@@ -227,11 +246,16 @@
   }
 }
 
+.feedback-form__required {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .feedback-form {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    padding-top: 25px;
 
     border-top: none;
   }
@@ -244,40 +268,50 @@
     &--full-name {
       order: 2;
 
-      width: 45%;
-      margin-left: 5%;
+      width: 41%;
+      margin-bottom: 32px;
+      padding-left: 9%;
     }
     &--contacts {
       order: 3;
 
       width: 100%;
+      margin-bottom: 16px;
     }
     &--impression {
       order: 1;
 
       width: 50%;
-
+      margin-bottom: 32px;
       box-shadow: 1px 0 0 #dbdbdb;
     }
     &--visits {
       order: 4;
-
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
       width: 100%;
+      margin: 0 auto;
     }
     &--message {
       order: 5;
 
       width: 100%;
+      margin-top: 28px;
+      margin-bottom: 52px;
     }
   }
 
   .feedback-form__btn {
     order: 6;
+    margin-left: 0;
+    margin-top: 0;
+    width: 323px;
   }
 
   .feedback-form__title {
     font-size: $title-size-mobile-screen;
-    margin-bottom: 40px;
+    margin-bottom: 59px;
 
     &--hidden {
       display: none;
@@ -299,6 +333,7 @@
       position: relative;
       display: block;
       width: 100%;
+      margin-bottom: 19px;
 
       &::before,
       &::after {
@@ -328,13 +363,46 @@
   .feedback-form__label {
     &--radio {
       margin-left: 0;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      margin-top: -10px;
       min-height: 58px;
     }
 
     &--checkbox {
       width: 225px;
+      margin-right: 0;
+      margin-top: 14px;
+
+      &:nth-of-type(1) {
+        order: 1;
+      }
+      &:nth-of-type(2) {
+        order: 3;
+      }
+      &:nth-of-type(3) {
+        order: 2;
+      }
+      &:nth-of-type(4) {
+        order: 4;
+      }
     }
+
+    &--phone {
+      margin-bottom: 19px;
+    }
+  }
+
+  .feedback-form__input {
+
+    &--phone,
+    &--email {
+      padding-left: 3%;
+    }
+  }
+
+  .feedback-form__textarea {
+    margin-top: 33px;
+    padding: 15px 21px;
   }
 
   .feedback-form__text {
@@ -343,26 +411,32 @@
     }
   }
 
-  .feedback-form__item--visits {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
+  .feedback-form__required {
+    display: block;
+    order: 6;
+    margin-top: 20px;
+
+    text-transform: uppercase;
   }
 }
 
 @media (min-width: $desktop-width) {
 
   .feedback-form__item {
+
     &--contacts {
       display: flex;
       flex-wrap: wrap;
       width: 960px;
     }
+
     &--visits {
       flex-wrap: wrap;
       justify-content: space-between;
+    }
+
+    &--full-name {
+      padding-left: 8%;
     }
   }
 
@@ -385,7 +459,10 @@
 
     &--checkbox {
       margin: 0;
+      margin-top: -20px;
+      margin-bottom: 30px;
       width: 225px;
+      justify-content: space-between;
     }
   }
 
@@ -393,10 +470,30 @@
     width: 315px;
   }
 
+  .feedback-form__title {
+    &--hidden {
+      display: inline;
+    }
+    &--lines {
+      margin-bottom: 60px;
+    }
+  }
+
   .feedback-form__text {
     &--hidden {
       display: none;
     }
+    &--margin {
+      margin-left: 0;
+    }
+    &--checkbox {
+      width: 100%;
+      margin-left: 35%;
+    }
+  }
+
+  .feedback-form__textarea {
+    margin-top: 0;
   }
 
   .feedback-form__btn {

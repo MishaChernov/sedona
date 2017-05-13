@@ -1,8 +1,8 @@
 .intro {
   width: auto;
   padding: 0;
-  padding-top: 90px;
-  padding-bottom: 95px;
+  padding-top: 89px;
+  padding-bottom: 84px;
   margin: 0;
 
   text-align: center;
@@ -20,16 +20,25 @@
 .intro__img {
   width: 282px;
   height: 214px;
+
+  &--size {
+    margin-top: 53px;
+    margin-bottom: 67px;
+    width: 229px;
+    height: 39px;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .intro {
+    padding-top: 77px;
+    padding-bottom: 90px;
     background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
     background-position: 50% 100%, 50% 0%;
 
     &--padding {
-      padding-top: 100px;
-      padding-bottom: 120px;
+      padding-top: 40px;
+      padding-bottom: 50px;
 
       background-position: 50% 100%, 50% 100%;
     }
@@ -48,10 +57,14 @@
 
 @media (min-width: $desktop-width) {
   .intro {
-    padding-top: 70px;
+    padding-top: 76px;
 
     background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
     background-size: 104%, $desktop-width;
+
+    &--padding {
+      padding-top: 48px;
+    }
   }
   .intro__img {
     &--size {

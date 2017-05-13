@@ -24,7 +24,7 @@
 
 .menu__link {
   display: block;
-  padding-top: 6px;
+  padding-top: 8px;
   padding-bottom: 8px;
 
   text-decoration: none;
@@ -71,7 +71,7 @@
 .menu__burger {
   position: absolute;
   top: 16px;
-  right: 30px;
+  right: 20px;
 }
 
 .menu--closed .burger {
@@ -104,7 +104,7 @@
 }
 
 .menu--opened .burger {
-  top: -205px;
+  top: -200px;
   height: 26px;
 
   &::before,
@@ -160,7 +160,8 @@
   }
 
   .menu--opened .burger {
-    top: -200px;
+    top: -210px;
+    right: 13px;
 
     box-shadow: none;
     &::before {
@@ -212,7 +213,8 @@
     box-shadow: none;
 
     &:nth-child(1) {
-      margin: 0 8%;
+      margin-left: 6%;
+      margin-right: 10%;
     }
     &:nth-child(2) {
       margin-right: auto;
@@ -221,8 +223,8 @@
       margin-left: auto;
     }
     &:nth-child(4) {
-      margin-left: 8%;
-      margin-right: 3%;
+      margin-left: 7%;
+      margin-right: 2%;
     }
   }
 
@@ -263,8 +265,8 @@
 @media (min-width: $desktop-width) {
   .menu__item {
     &:first-child {
-      margin-left: 10%;
-      margin-right: 15%;
+      margin-left: 8%;
+      margin-right: 13%;
     }
     &:nth-child(2) {
       margin-right: auto;
@@ -273,8 +275,8 @@
       margin-left: auto;
     }
     &:last-child {
-      margin-left: 15%;
-      margin-right: 5%;
+      margin-left: 11%;
+      margin-right: 6%;
     }
   }
 }

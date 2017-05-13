@@ -80,7 +80,7 @@
 }
 
 .video-player__subtitles-btn {
-  right: 20%;
+  right: 72px;
 }
 
 .video-player__fullscreen-btn {
@@ -103,6 +103,7 @@
     flex-basis: 100%;
     margin-top: 33px;
     padding: 0 5%;
+    padding-right: 6%;
   }
 
   .video-player__btn {
@@ -115,6 +116,11 @@
 
   .video-player__time-line {
     order: 2;
+    width: 68%;
+  }
+
+  .video-player__toggle {
+    left: 30%;
   }
 
   .video-player__replay-btn {
@@ -125,6 +131,7 @@
   .video-player__subtitles-btn {
     order: 3;
     margin: 0 20px;
+    margin-right: 32px;
   }
 
   .video-player__fullscreen-btn {

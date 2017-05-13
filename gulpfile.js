@@ -30,7 +30,7 @@ gulp.task('style', function() {
         'last 2 Edge versions'
       ]}),
       mqpacker({
-        sort: false
+        sort: true
       })
     ]))
     .pipe(gulp.dest('build/css'))

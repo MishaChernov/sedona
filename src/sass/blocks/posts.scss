@@ -10,7 +10,7 @@
   }
 }
 
-@media (min-width: 900px) and (max-width: 1199px) {
+@media (min-width: 900px) and (max-width: $tablet-max-width) {
   .posts {
     width: 740px;
     margin: 0 auto;
